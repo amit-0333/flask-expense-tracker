@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Lunch",
+        "amount": 120.0,
+        "category": "Food",
+        "date": "2026-05-24",
+        "note": "Biryani from canteen"
+    },
+    {
+        "id": 2,
+        "title": "Bus fare",
+        "amount": 30.0,
+        "category": "Transport",
+        "date": "2026-05-24",
+        "note": ""
+    }
+]
