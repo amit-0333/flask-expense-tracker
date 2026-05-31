@@ -1,108 +1,244 @@
-# 💸 Xpense Tracker
+<div align="center">
 
-A clean, aesthetic expense tracking web app built with **Flask** and **JSON file storage** — no database setup required.
+```text
+██╗  ██╗██████╗ ███████╗███╗   ██╗███████╗███████╗
+╚██╗██╔╝██╔══██╗██╔════╝████╗  ██║██╔════╝██╔════╝
+ ╚███╔╝ ██████╔╝█████╗  ██╔██╗ ██║███████╗█████╗
+ ██╔██╗ ██╔═══╝ ██╔══╝  ██║╚██╗██║╚════██║██╔══╝
+██╔╝ ██╗██║     ███████╗██║ ╚████║███████║███████╗
+╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
+
+████████╗██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗
+╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+   ██║   ██████╔╝███████║██║     █████╔╝ █████╗  ██████╔╝
+   ██║   ██╔══██╗██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+   ██║   ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+```
+
+### 💸 Xpense Tracker
+
+> A clean and aesthetic expense tracking web application built using Flask and JSON storage. Manage expenses, track spending habits, and organize finances without requiring a database setup.
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Web%20App-black?style=for-the-badge\&logo=flask)
+![JSON](https://img.shields.io/badge/Database-JSON-lightgrey?style=for-the-badge)
+![HTML](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🚀 Getting Started
+# 📌 About
 
-### 1. Install dependencies
+Xpense Tracker is a full-stack expense management application built using Flask and file-based JSON storage.
+
+The application helps users:
+
+* 💸 Track daily expenses
+* 📊 Monitor spending patterns
+* 🗂️ Categorize transactions
+* 📅 Filter expenses by month and category
+* 💾 Store data locally without a database
+
+The project demonstrates CRUD operations, server-side rendering, file handling, and responsive UI design using Flask.
+
+---
+
+# ✨ Features
+
+| Feature                 | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| ➕ Add Expense           | Record a new expense with title, amount, category, and notes |
+| ✏️ Edit Expense         | Modify existing expense records                              |
+| 🗑️ Delete Expense      | Remove unwanted transactions                                 |
+| 🗂️ Category Management | Organize expenses into categories                            |
+| 📅 Monthly Filtering    | View expenses for specific months                            |
+| 💰 Spending Summary     | Dashboard cards showing total expenditure                    |
+| 💾 JSON Storage         | Lightweight database-free persistence                        |
+| 🎨 Modern UI            | Elegant warm-themed interface                                |
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology      | Usage               |
+| --------------- | ------------------- |
+| 🐍 Python       | Backend Development |
+| 🌶️ Flask       | Web Framework       |
+| 📄 JSON         | Local Data Storage  |
+| 🎨 HTML/CSS     | Frontend Interface  |
+| 🔧 Git & GitHub | Version Control     |
+
+---
+
+# 📚 Concepts Implemented
+
+| Concept             | Status  |
+| ------------------- | ------- |
+| Flask Routing       | 🟢 Done |
+| CRUD Operations     | 🟢 Done |
+| File Handling       | 🟢 Done |
+| JSON Storage        | 🟢 Done |
+| Form Processing     | 🟢 Done |
+| Template Rendering  | 🟢 Done |
+| Expense Filtering   | 🟢 Done |
+| Dashboard Analytics | 🟢 Done |
+
+---
+
+# 🗂️ Project Structure
+
 ```bash
-pip install flask
+Xpense-Tracker/
+│
+├── 📄 app.py
+│   └── Flask Routes & Business Logic
+│
+├── 📄 data.json
+│   └── Expense Database
+│
+├── 📄 requirements.txt
+│
+├── 📂 static/
+│   └── style.css
+│
+├── 📂 templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── add_expense.html
+│   └── edit_expense.html
+│
+└── 📄 README.md
 ```
 
-### 2. Run the app
+---
+
+# ⚙️ How to Run
+
 ```bash
+# Clone Repository
+git clone https://github.com/amit-0333/Xpense-Tracker.git
+
+# Navigate into project
+cd Xpense-Tracker
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Flask application
 python app.py
 ```
 
-### 3. Open in browser
-```
+Open your browser and visit:
+
+```text
 http://127.0.0.1:5000
 ```
 
 ---
 
-## 📁 Project Structure
+# 🎯 Application Workflow
 
-```
-expense-tracker/
-├── app.py              ← Flask routes + JSON file I/O
-├── data.json           ← Your expense database (auto-created)
-├── requirements.txt
-├── static/
-│   └── style.css       ← Warm terracotta aesthetic styles
-└── templates/
-    ├── base.html        ← Shared layout (navbar, alerts)
-    ├── index.html       ← Dashboard with summary cards + table
-    ├── add_expense.html ← Add new expense form
-    └── edit_expense.html← Edit existing expense form
+```text
+User Action
+     │
+     ▼
+Flask Routes
+     │
+     ▼
+Read data.json
+     │
+     ▼
+Add / Edit / Delete
+     │
+     ▼
+Update Expense List
+     │
+     ▼
+Write Back to JSON
+     │
+     ▼
+Render Updated Dashboard
 ```
 
 ---
 
-## ✨ Features
+# 💰 Expense Data Format
 
-- ➕ Add, edit, and delete expenses
-- 🗂️ Categorise expenses (Food, Transport, Shopping, Bills, Health, etc.)
-- 📅 Filter by category and month
-- 💰 Summary cards showing total and per-category spending
-- 💾 All data saved to `data.json` — no database needed
-- 🎨 Elegant warm aesthetic with Cormorant Garamond + DM Sans fonts
-
----
-
-## 🗃️ How Data is Stored
-
-All expenses are stored in `data.json` as a list of objects:
+Each expense is stored as a JSON object:
 
 ```json
-[
-    {
-        "id": 1,
-        "title": "Lunch",
-        "amount": 120.0,
-        "category": "Food",
-        "date": "2026-05-24",
-        "note": "Biryani from canteen"
-    }
-]
+{
+    "id": 1,
+    "title": "Lunch",
+    "amount": 120.0,
+    "category": "Food",
+    "date": "2026-05-24",
+    "note": "Biryani from canteen"
+}
 ```
 
-The app reads and writes this file directly using Python's built-in `json` module — no SQL, no ORM, no setup.
+---
+
+# 🎯 Learning Outcomes
+
+* [x] Build complete Flask applications
+* [x] Implement CRUD functionality
+* [x] Work with JSON as a lightweight database
+* [x] Handle forms and user input
+* [x] Design responsive web interfaces
+* [x] Structure Flask projects professionally
+* [x] Implement filtering and summary analytics
+* [ ] Add authentication system
+* [ ] Deploy to cloud platform
 
 ---
 
-## 🛠️ How the JSON I/O Works
+# 🔮 Future Improvements
 
-```python
-# Read all expenses
-def read_data():
-    with open("data.json", "r") as f:
-        return json.load(f)
-
-# Write all expenses back
-def write_data(expenses):
-    with open("data.json", "w") as f:
-        json.dump(expenses, f, indent=4)
-```
-
-Every add, edit, or delete reads the file, modifies the list in memory, then writes it back.
+* [ ] Interactive Charts using Chart.js
+* [ ] Export Expenses to CSV
+* [ ] Budget Limit Notifications
+* [ ] Recurring Expense Tracking
+* [ ] User Authentication
+* [ ] Multi-Currency Support
+* [ ] Expense Search Functionality
+* [ ] Dark Mode Support
 
 ---
 
-## 📦 Dependencies
+# 🙏 Acknowledgements
 
-| Package | Purpose        |
-|---------|----------------|
-| Flask   | Web framework  |
+This project was built to strengthen practical knowledge of:
+
+* Flask Development
+* CRUD Operations
+* JSON File Handling
+* Web Application Architecture
+* Expense Management Systems
 
 ---
 
-## 🔮 Possible Enhancements
+# 👨‍💻 Author
 
-- [ ] Monthly spending chart (Chart.js)
-- [ ] Export to CSV
-- [ ] Budget limit alerts
-- [ ] Recurring expenses
-- [ ] Multi-currency support
+**Amit Kumar**
+
+[![GitHub](https://img.shields.io/badge/GitHub-amit--0333-181717?style=flat\&logo=github)](https://github.com/amit-0333)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Amit%20Kumar-0077B5?style=flat\&logo=linkedin)](https://www.linkedin.com/in/amit-kumar-a62a3640a/)
+
+[![Kaggle](https://img.shields.io/badge/Kaggle-amitkumar038975-20BEFF?style=flat\&logo=kaggle)](https://www.kaggle.com/amitkumar038975)
+
+---
+
+<div align="center">
+
+### ⭐ Star this repository if you found it useful!
+
+💸 Track smarter. Spend better. Save more.
+
+</div>
